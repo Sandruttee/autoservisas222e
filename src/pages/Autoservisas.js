@@ -1,9 +1,11 @@
 import React from "react";
+import logo from "./autoservisas-logo.jpeg";
+import "./styling.css";
 
 const Autoservisas = () => {
   return (
-    <div>
-      <h1>.</h1>
+    <div class="container">
+      <img src={logo} class="img-fluid autoservisas-logo" alt="logo" />
     </div>
   );
 };
