@@ -1,11 +1,11 @@
 import React from "react";
 
-const autoservisas = () => {
+const Autoservisas = () => {
   return (
     <div>
-      <h1>GeeksforGeeks is a Computer Science portal for geeks.</h1>
+      <h1>.</h1>
     </div>
   );
 };
 
-export default autoservisas;
+export default Autoservisas;

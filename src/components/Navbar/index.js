@@ -10,10 +10,10 @@ const Navbar = () => {
             Autoservisas
           </NavLink>
           <NavLink to="/Booking" activeStyle>
-            Booking
+            Paslaugų rezervacija
           </NavLink>
           <NavLink to="/Contact" activeStyle>
-            Contact
+            Kontaktai
           </NavLink>
         </NavMenu>
       </Nav>
