@@ -1,7 +1,59 @@
+.page-container {
+  font-family: "Dancing Script", cursive;
+  font-family: "Poppins", sans-serif;
+}
 .container {
+  background-color: black;
+  max-width: 100%;
+  padding: 100px;
 }
 
 .autoservisas-logo {
   margin: 0 auto;
   display: block;
+}
+
+h1 {
+  padding-top: 100px;
+  font-weight: bold;
+  font-size: 50px;
+}
+h2 {
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 10px;
+  padding-bottom: 50px;
+}
+
+h4 {
+  font-weight: 700;
+  font-style: italic;
+}
+ul {
+  list-style: none;
+  padding-bottom: 50px;
+}
+li {
+  font-weight: 300;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.p-footer {
+  font-size: 12px;
+}
+
+footer {
+  background-color: black;
+  max-width: 100%;
+  padding: 50px;
+  color: white;
+  text-align: center;
+}
+
+.red-text {
+  color: red;
 }
