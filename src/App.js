@@ -2,9 +2,9 @@ import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Autoservisas from "./Autoservisas";
-import Booking from "./Booking";
-import Contact from "./Contact";
+import Autoservisas from "./pages/Autoservisas";
+import Booking from "./pages/Booking";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
