@@ -10,6 +10,7 @@ const Contact = () => {
             <a
               href="https://www.facebook.com/profile.php?id=100070816060830"
               target="_blank"
+              rel="noreferrer"
               class="link-facebook"
             >
               <i class="fa-brands fa-square-facebook icon-facebook"> </i> AUTO
