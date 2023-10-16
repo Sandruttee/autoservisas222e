@@ -1,13 +1,28 @@
+:root {
+  --red-color: #fe0201;
+  --background-black: #000000;
+  --text-color: #212529;
+}
+
 .page-container {
   font-family: "Dancing Script", cursive;
   font-family: "Poppins", sans-serif;
+  color: var(--text-color);
 }
 .container {
-  background-color: black;
+  background-color: var(--background-black);
   max-width: 100%;
   padding: 100px;
 }
+.container-white {
+  max-width: 100%;
+  padding: 100px;
+  text-align: center;
+}
 
+.contact-container {
+  margin-top: 100px;
+}
 .autoservisas-logo {
   margin: 0 auto;
   display: block;
@@ -23,6 +38,10 @@ h2 {
   font-size: 20px;
   letter-spacing: 10px;
   padding-bottom: 50px;
+}
+
+h3 {
+  margin-top: 30px;
 }
 
 h4 {
@@ -47,7 +66,7 @@ p {
 }
 
 footer {
-  background-color: black;
+  background-color: var(--background-black);
   max-width: 100%;
   padding: 50px;
   color: white;
@@ -55,5 +74,22 @@ footer {
 }
 
 .red-text {
-  color: red;
+  color: var(--red-color);
+}
+
+.link-facebook {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 900;
+  transition: ease-in-out;
+}
+
+.link-facebook :hover {
+  opacity: 0.5;
+  font-size: 30px;
+}
+
+.link-email {
+  text-decoration: none;
+  color: var(--text-color);
 }
