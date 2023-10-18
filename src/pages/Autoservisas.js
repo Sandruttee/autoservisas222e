@@ -11,7 +11,7 @@ const Autoservisas = () => {
       <p>
         <h1>Sveiki atvykę į AUTOSERVISAS 222e</h1>
         <h2>Mes rūpinamės Jūsų automobiliais nuo 2021-ųjų</h2>
-        <h3>Mes atliekame šias paslaugas: </h3>
+        <h3>Mūsų siūlomos paslaugos: </h3>
         <ul>
           <li>Važiuoklės remontas</li>
           <li>Tepalų ir filtrų keitimas</li>
