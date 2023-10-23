@@ -3,7 +3,6 @@ import React from "react";
 const Booking = () => {
   return (
     <div class="page-container">
-      {" "}
       <footer>
         <h4>
           AUTO<span class="red-text">SERVISAS 222E</span>
