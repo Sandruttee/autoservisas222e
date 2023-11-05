@@ -1,18 +1,10 @@
 import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function Booking() {
   let [username, setUsername] = useState("");
   let [password, setPassword] = useState("");
-
-  console.log(username);
-
-  function handleSubmit(event) {
-    event.preventDefault();
-
-    if (username === "x" && password === "y") {
-      alert("hi");
-    }
-  }
 
   function updateUsername(event) {
     setUsername(event.target.value);
@@ -20,6 +12,15 @@ export default function Booking() {
 
   function updatePassword(event) {
     setPassword(event.target.value);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (username === "Egidijus" && password === "y") {
+      <Navigate to="/Contact" />;
+    } else {
+      alert("sorry");
+    }
   }
 
   return (
