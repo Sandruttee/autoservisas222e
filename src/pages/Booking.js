@@ -1,16 +1,29 @@
 import React, { useState } from "react";
 
-const Booking = () => {
-  const [username, setUsername] = useState(null);
-  const [password, setPassword] = useState(null);
+export default function Booking() {
+  let [username, setUsername] = useState("");
+  let [password, setPassword] = useState("");
+
+  console.log(username);
+
   function handleSubmit(event) {
     event.preventDefault();
+
     if (username === "x" && password === "y") {
       alert("hi");
     }
   }
+
+  function updateUsername(event) {
+    setUsername(event.target.value);
+  }
+
+  function updatePassword(event) {
+    setPassword(event.target.value);
+  }
+
   return (
-    <div class="page-container">
+    <div className="page-container">
       <main className="login">
         <form className="login__form" onSubmit={handleSubmit}>
           <h5 className="login__title">Prisijunkite prie savo paskyros</h5>
@@ -19,8 +32,7 @@ const Booking = () => {
             id="username"
             name="username"
             type="text"
-            value={username}
-            onChange={setUsername}
+            onChange={updateUsername}
             className="username"
           />
           <label htmlFor="password">Slaptažodis</label>
@@ -28,8 +40,7 @@ const Booking = () => {
             id="password"
             type="password"
             name="password"
-            value={password}
-            onChange={setPassword}
+            onChange={updatePassword}
             className="password"
           />
           <input className="loginButton" type="submit" value="Prisijungti" />
@@ -38,13 +49,13 @@ const Booking = () => {
 
       <footer>
         <h4>
-          AUTO<span class="red-text">SERVISAS 222E</span>
+          AUTO<span className="red-text">SERVISAS 222E</span>
         </h4>
-        <p class="p-footer">Mus rasite adresu: Staniūnų g. 67a, Panevėžys</p>
-        <p class="p-footer">Susisiekite su mumis: +37063222439</p>
+        <p className="p-footer">
+          Mus rasite adresu: Staniūnų g. 67a, Panevėžys
+        </p>
+        <p className="p-footer">Susisiekite su mumis: +37063222439</p>
       </footer>
     </div>
   );
-};
-
-export default Booking;
+}
