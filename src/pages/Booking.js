@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
-import { NavigationContainer } from "@react-navigation/native";
 
 export default function Booking() {
   let [username, setUsername] = useState("");
