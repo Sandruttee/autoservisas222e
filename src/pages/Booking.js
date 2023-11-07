@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Booking() {
   let [username, setUsername] = useState("");
   let [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   function updateUsername(event) {
     setUsername(event.target.value);
@@ -16,7 +17,7 @@ export default function Booking() {
   function handleSubmit(event) {
     event.preventDefault();
     if (username === "Egidijus" && password === "y") {
-      <Navigate to="/Contact" />;
+      navigate("/Contact");
     } else {
       alert("sorry");
     }
