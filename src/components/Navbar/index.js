@@ -10,7 +10,7 @@ const Navbar = () => {
             Autoservisas
           </NavLink>
           <NavLink to="/Booking" activeStyle>
-            Paslaugų rezervacija
+            Prisijungimas
           </NavLink>
           <NavLink to="/Contact" activeStyle>
             Kontaktai

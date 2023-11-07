@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Autoservisas from "./pages/Autoservisas";
 import Booking from "./pages/Booking";
 import Contact from "./pages/Contact";
+import User from "./pages/User";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" exact element={<Autoservisas />} />
           <Route path="/Booking" element={<Booking />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/User" element={<User />} />
         </Routes>
       </Router>{" "}
     </div>
