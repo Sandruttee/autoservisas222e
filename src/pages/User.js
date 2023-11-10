@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { sendEmail } from "../utils/resource";
-import { fetchBookingDetails } from "../utils/resource";
-
-const BookUser = () => {
+const User = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -18,20 +15,9 @@ const BookUser = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    sendEmail(receiverEmail, email, fullName, message, duration);
     setFullName("");
     setMessage("");
   };
-
-  useEffect(() => {
-    fetchBookingDetails(
-      user,
-      setError,
-      setTimezone,
-      setSchedules,
-      setReceiverEmail
-    );
-  }, [user]);
 
   return (
     <div>
@@ -91,4 +77,4 @@ const BookUser = () => {
   );
 };
 
-export default BookUser;
+export default User;

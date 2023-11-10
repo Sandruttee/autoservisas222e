@@ -17,7 +17,7 @@ export default function Booking() {
   function handleSubmit(event) {
     event.preventDefault();
     if (username === "Egidijus" && password === "y") {
-      navigate("/User");
+      navigate("/Owner");
     } else {
       alert("sorry");
     }
