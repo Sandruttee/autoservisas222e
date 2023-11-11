@@ -134,3 +134,29 @@ footer {
   background-color: var(--background-black);
   color: white;
 }
+
+.bookContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+}
+.booking__form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+.bookTitle {
+  margin-bottom: 30px;
+  color: var(--red-color);
+}
+.bookingBtn {
+  margin-top: 20px;
+  background-color: var(--background-black);
+  color: #fff;
+}
