@@ -22,9 +22,9 @@ const User = () => {
   return (
     <div>
       <div className="bookContainer">
-        <h2 className="bookTitle">Book a session with {user}</h2>
+        <h2 className="bookTitle">Rezervuoti laiką{user}</h2>
         <form onSubmit={handleSubmit} className="booking__form">
-          <label htmlFor="fullName">Full Name</label>
+          <label htmlFor="fullName">Vardas ir Pavardė</label>
           <input
             id="fullName"
             name="fullName"
@@ -33,7 +33,7 @@ const User = () => {
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
           />
-          <label htmlFor="email">Email Address</label>
+          <label htmlFor="email">El-pašto adresas</label>
           <input
             id="email"
             name="email"
@@ -43,7 +43,7 @@ const User = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <label htmlFor="message">Any important note? (optional)</label>
+          <label htmlFor="message">Palikite žinutę</label>
           <textarea
             rows={5}
             name="message"
@@ -52,9 +52,7 @@ const User = () => {
             onChange={(e) => setMessage(e.target.value)}
           />
 
-          <label htmlFor="session">
-            Select your preferred session - {timezone}
-          </label>
+          <label htmlFor="session">Pasirinkite laiką {timezone}</label>
           <select name="duration" onChange={(e) => setDuration(e.target.value)}>
             {schedules.map((schedule) => (
               <option
@@ -63,7 +61,7 @@ const User = () => {
               >{`${schedule.day} - ${schedule.startTime} : ${schedule.endTime}`}</option>
             ))}
           </select>
-          <button className="bookingBtn">SEND</button>
+          <button className="bookingBtn">REZERVUOTI</button>
         </form>
       </div>
       <footer>
