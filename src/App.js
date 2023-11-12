@@ -6,6 +6,7 @@ import Autoservisas from "./pages/Autoservisas";
 import Booking from "./pages/Booking";
 import Contact from "./pages/Contact";
 import User from "./pages/User";
+import Owner from "./pages/Owner";
 
 function App() {
   return (
