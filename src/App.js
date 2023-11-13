@@ -18,6 +18,7 @@ function App() {
           <Route path="/Booking" element={<Booking />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/User" element={<User />} />
+          <Route path="/Owner" element={<Owner />} />
         </Routes>
       </Router>{" "}
     </div>
