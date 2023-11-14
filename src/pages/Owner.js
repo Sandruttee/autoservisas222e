@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import TimezoneSelect from "react-timezone-select";
-import { time } from "../utils/resource";
+import time from "../utils/resource";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { handleCreateSchedule } from "../utils/resource";
+import handleCreateSchedule from "../utils/resource";
 
 const Owner = () => {
   const navigate = useNavigate();
