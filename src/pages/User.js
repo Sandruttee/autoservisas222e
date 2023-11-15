@@ -20,9 +20,9 @@ const User = () => {
   };
 
   return (
-    <div>
+    <div className="page-container">
       <div className="bookContainer">
-        <h2 className="bookTitle">Rezervuoti laiką{user}</h2>
+        <h1 className="bookTitle">Rezervuoti laiką{user}</h1>
         <form onSubmit={handleSubmit} className="booking__form">
           <label htmlFor="fullName">Vardas ir Pavardė</label>
           <input

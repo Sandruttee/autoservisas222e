@@ -27,7 +27,7 @@ export default function Booking() {
     <div className="page-container">
       <main className="login">
         <form className="login__form" onSubmit={handleSubmit}>
-          <h5 className="login__title">Prisijunkite prie savo paskyros</h5>
+          <h1 className="login__title">Prisijunkite prie savo paskyros</h1>
           <label htmlFor="username">Vartotojo vardas</label>
           <input
             id="username"

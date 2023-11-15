@@ -55,6 +55,9 @@ ul {
 li {
   font-weight: 300;
 }
+label {
+  font-weight: 300;
+}
 
 p {
   text-align: center;
@@ -124,12 +127,15 @@ footer {
   margin-top: 10px;
   margin-bottom: 50px;
 }
-.login__title,
+.login__title {
+  margin-bottom: 200px;
+}
+
 .signup__title {
   margin-bottom: 30px;
 }
 .loginButton {
-  max-width: 50%;
+  max-width: 100%;
   padding: 15px;
   background-color: var(--background-black);
   color: white;
