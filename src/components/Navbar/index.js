@@ -9,6 +9,9 @@ const Navbar = () => {
           <NavLink to="/" activeStyle>
             Autoservisas
           </NavLink>
+          <NavLink to="/Paslaugos" activeStyle>
+            Paslaugos
+          </NavLink>
           <NavLink to="/User" activeStyle>
             Rezervuok laiką
           </NavLink>

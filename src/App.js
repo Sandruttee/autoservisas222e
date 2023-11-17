@@ -7,6 +7,7 @@ import Booking from "./pages/Booking";
 import Contact from "./pages/Contact";
 import User from "./pages/User";
 import Owner from "./pages/Owner";
+import Paslaugos from "./pages/Paslaugos";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Autoservisas />} />
+          <Route path="/Paslaugos" element={<Paslaugos />} />
           <Route path="/Booking" element={<Booking />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/User" element={<User />} />
