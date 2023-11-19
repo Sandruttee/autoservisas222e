@@ -1,27 +1,25 @@
 import React, { useState } from "react";
 
-export default function Owner() {
+export default function AvailableTime({ setAvailableTimes }) {
+  const [timeSlot, setTimeSlot] = useState("");
+
+  const handleAddTimeSlot = () => {
+    if (timeSlot.trim() !== "") {
+      setAvailableTimes((prevTimes) => [...prevTimes, timeSlot]);
+      setTimeSlot("");
+    }
+  };
+
   return (
     <div>
-      <main>
-        <form>
-          {" "}
-          <label>Pasirinkite laiką</label> <br />
-          <select>
-            <option>08:30 - 09:00</option>
-            <option>09:00 - 10:00</option>
-          </select>{" "}
-          <br />
-          <button className="bookingBtn">REZERVUOTI</button>
-        </form>
-      </main>
-      <footer>
-        <h4>
-          AUTO<span class="red-text">SERVISAS 222E</span>
-        </h4>
-        <p class="p-footer">Mus rasite adresu: Staniūnų g. 67a, Panevėžys</p>
-        <p class="p-footer">Susisiekite su mumis: +37063222439</p>
-      </footer>
+      <h3>Set Your Available Time</h3>
+      <input
+        type="text"
+        value={timeSlot}
+        onChange={(e) => setTimeSlot(e.target.value)}
+      />
+      <button onClick={handleAddTimeSlot}>Add Time Slot</button>
+      <hr />
     </div>
   );
 }

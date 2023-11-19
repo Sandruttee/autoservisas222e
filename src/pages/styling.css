@@ -165,3 +165,8 @@ footer {
   background-color: var(--background-black);
   color: #fff;
 }
+
+.timeForm {
+  padding: 150px;
+  text-align: center;
+}
