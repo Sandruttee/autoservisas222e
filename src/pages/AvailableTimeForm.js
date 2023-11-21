@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function AvailableTime({ setAvailableTimes }) {
+function AvailableTimeForm({ setAvailableTimes }) {
   const [timeSlot, setTimeSlot] = useState("");
 
   const handleAddTimeSlot = () => {
@@ -23,3 +23,5 @@ export default function AvailableTime({ setAvailableTimes }) {
     </div>
   );
 }
+
+export default AvailableTimeForm;

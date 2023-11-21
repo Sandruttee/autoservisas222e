@@ -12,7 +12,7 @@ const Navbar = () => {
           <NavLink to="/Paslaugos" activeStyle>
             Paslaugos
           </NavLink>
-          <NavLink to="/User" activeStyle>
+          <NavLink to="/BookingApp" activeStyle>
             Rezervuok laiką
           </NavLink>
 

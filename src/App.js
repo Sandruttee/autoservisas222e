@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Autoservisas from "./pages/Autoservisas";
 import Booking from "./pages/Booking";
 import Contact from "./pages/Contact";
-import User from "./pages/User";
-import Owner from "./pages/Owner";
+import BookingApp from "./pages/BookingApp";
+import AvailableTimeForm from "./pages/AvailableTimeForm";
 import Paslaugos from "./pages/Paslaugos";
 
 function App() {
@@ -19,8 +19,8 @@ function App() {
           <Route path="/Paslaugos" element={<Paslaugos />} />
           <Route path="/Booking" element={<Booking />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/User" element={<User />} />
-          <Route path="/Owner" element={<Owner />} />
+          <Route path="/BookingApp" element={<BookingApp />} />
+          <Route path="/AvailableTimeForm" element={<AvailableTimeForm />} />
         </Routes>
       </Router>{" "}
     </div>

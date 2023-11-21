@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import AvailableTime from "./Owner";
 
-function BookingApp(props) {
-  const [availableTimes, setAvailableTimes] = useState([]);
+function BookingApp({ availableTimes }) {
   const [selectedTime, setSelectedTime] = useState("");
 
   const handleTimeSlotClick = (time) => {
@@ -12,7 +10,6 @@ function BookingApp(props) {
   return (
     <div>
       <h1>Time Booking Application</h1>
-      <AvailableTime setAvailableTimes={setAvailableTimes} />
       <h2>Select a time slot:</h2>
       <div>
         {availableTimes.map((time, index) => (
