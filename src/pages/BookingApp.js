@@ -16,6 +16,7 @@ class BookingApp extends React.Component {
   bookTime = () => {
     this.setState((prevState) => ({
       bookedTimes: [...prevState.bookedTimes, this.state.selectedTime],
+      selectedTime: "",
     }));
   };
 
@@ -25,11 +26,12 @@ class BookingApp extends React.Component {
         <h2>Booking App</h2>
         <select onChange={this.handleTimeSelection}>
           <option value="">Select a Time</option>
-          {this.props.availableTimes.map((time, index) => (
-            <option key={index} value={time}>
-              {time}
-            </option>
-          ))}
+          {this.props.availableTimes &&
+            this.props.availableTimes.map((time, index) => (
+              <option key={index} value={time}>
+                {time}
+              </option>
+            ))}
         </select>
         <button onClick={this.bookTime}>Book Time</button>
         <ul>

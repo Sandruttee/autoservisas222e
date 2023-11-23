@@ -4,7 +4,6 @@ class AvailableTimeForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      availableTimes: [],
       newTime: "",
     };
   }
@@ -14,10 +13,10 @@ class AvailableTimeForm extends React.Component {
   };
 
   addTime = () => {
-    this.setState((prevState) => ({
-      availableTimes: [...prevState.availableTimes, this.state.newTime],
-      newTime: "",
-    }));
+    if (this.props.onAddTime) {
+      this.props.onAddTime(this.state.newTime);
+      this.setState({ newTime: "" });
+    }
   };
 
   render() {
@@ -30,11 +29,6 @@ class AvailableTimeForm extends React.Component {
           onChange={this.handleInputChange}
         />
         <button onClick={this.addTime}>Add Time</button>
-        <ul>
-          {this.state.availableTimes.map((time, index) => (
-            <li key={index}>{time}</li>
-          ))}
-        </ul>
       </div>
     );
   }
