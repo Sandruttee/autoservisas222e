@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import AvailableTimeForm from "./AvailableTimeForm";
 import BookingApp from "./BookingApp";
 
-function Parent() {
-  const [availableTimes, setAvailableTimes] = useState([]);
-
-  return (
-    <div>
-      <AvailableTimeForm setAvailableTimes={setAvailableTimes} />
-      <BookingApp availableTimes={availableTimes} />
-    </div>
-  );
+class Parent extends React.Component {
+  render() {
+    return (
+      <div>
+        <AvailableTimeForm />
+        <BookingApp />
+      </div>
+    );
+  }
 }
 
 export default Parent;

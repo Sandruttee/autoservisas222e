@@ -1,41 +1,45 @@
-import React, { useState } from "react";
+import React from "react";
 
-function BookingApp({ availableTimes }) {
-  const [selectedTime, setSelectedTime] = useState("");
+class BookingApp extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      bookedTimes: [],
+      selectedTime: "",
+    };
+  }
 
-  const handleTimeSlotClick = (time) => {
-    setSelectedTime(time);
+  handleTimeSelection = (e) => {
+    this.setState({ selectedTime: e.target.value });
   };
 
-  return (
-    <div>
-      <h1>Time Booking Application</h1>
-      <h2>Select a time slot:</h2>
-      <div>
-        {availableTimes.map((time, index) => (
-          <button key={index} onClick={() => handleTimeSlotClick(time)}>
-            {time}
-          </button>
-        ))}
-      </div>
-      {selectedTime && (
-        <div>
-          <h3>Your selected time slot:</h3>
-          <p>{selectedTime}</p>
-        </div>
-      )}
+  bookTime = () => {
+    this.setState((prevState) => ({
+      bookedTimes: [...prevState.bookedTimes, this.state.selectedTime],
+    }));
+  };
 
-      <footer>
-        <h4>
-          AUTO<span className="red-text">SERVISAS 222E</span>
-        </h4>
-        <p className="p-footer">
-          Mus rasite adresu: Staniūnų g. 67a, Panevėžys
-        </p>
-        <p className="p-footer">Susisiekite su mumis: +37063222439</p>
-      </footer>
-    </div>
-  );
+  render() {
+    return (
+      <div>
+        <h2>Booking App</h2>
+        <select onChange={this.handleTimeSelection}>
+          <option value="">Select a Time</option>
+          {this.props.availableTimes.map((time, index) => (
+            <option key={index} value={time}>
+              {time}
+            </option>
+          ))}
+        </select>
+        <button onClick={this.bookTime}>Book Time</button>
+        <ul>
+          {this.state.bookedTimes.map((time, index) => (
+            <li key={index}>{time}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
 }
 
 export default BookingApp;
