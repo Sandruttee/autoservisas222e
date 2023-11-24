@@ -22,7 +22,7 @@ class BookingApp extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="formContainer">
         <h2>Booking App</h2>
         <select onChange={this.handleTimeSelection}>
           <option value="">Select a Time</option>
@@ -33,7 +33,9 @@ class BookingApp extends React.Component {
               </option>
             ))}
         </select>
-        <button onClick={this.bookTime}>Book Time</button>
+        <button className="loginButton" onClick={this.bookTime}>
+          Book Time
+        </button>
         <ul>
           {this.state.bookedTimes.map((time, index) => (
             <li key={index}>{time}</li>

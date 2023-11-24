@@ -21,14 +21,16 @@ class AvailableTimeForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="formContainer ">
         <h2>Available Time Form</h2>
         <input
           type="text"
           value={this.state.newTime}
           onChange={this.handleInputChange}
         />
-        <button onClick={this.addTime}>Add Time</button>
+        <button className="loginButton" onClick={this.addTime}>
+          Add Time
+        </button>
       </div>
     );
   }
