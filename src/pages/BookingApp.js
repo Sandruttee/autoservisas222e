@@ -23,9 +23,9 @@ class BookingApp extends React.Component {
   render() {
     return (
       <div className="formContainer">
-        <h2>Booking App</h2>
-        <select onChange={this.handleTimeSelection}>
-          <option value="">Select a Time</option>
+        <h2>Pasirinkite Jums tinkamą laiką</h2>
+        <select className="loginInput" onChange={this.handleTimeSelection}>
+          <option value="">Pasirinkti laiką</option>
           {this.props.availableTimes &&
             this.props.availableTimes.map((time, index) => (
               <option key={index} value={time}>
@@ -34,7 +34,7 @@ class BookingApp extends React.Component {
             ))}
         </select>
         <button className="loginButton" onClick={this.bookTime}>
-          Book Time
+          Rezervuoti laiką
         </button>
         <ul>
           {this.state.bookedTimes.map((time, index) => (

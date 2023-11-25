@@ -22,11 +22,14 @@ class AvailableTimeForm extends React.Component {
   render() {
     return (
       <div className="formContainer ">
-        <h2>Available Time Form</h2>
+        <h2>
+          Įveskite savo laiką, kuriuo esate laisvas. Pavyzdys: 10:00-11:00
+        </h2>
         <input
           type="text"
           value={this.state.newTime}
           onChange={this.handleInputChange}
+          className="loginInput"
         />
         <button className="loginButton" onClick={this.addTime}>
           Add Time

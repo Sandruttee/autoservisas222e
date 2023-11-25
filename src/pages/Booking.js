@@ -34,7 +34,7 @@ export default function Booking() {
             name="username"
             type="text"
             onChange={updateUsername}
-            className="username"
+            className="username loginInput"
           />
           <label htmlFor="password">Slaptažodis</label>
           <input
@@ -42,7 +42,7 @@ export default function Booking() {
             type="password"
             name="password"
             onChange={updatePassword}
-            className="password"
+            className="password loginInput"
           />
           <input className="loginButton" type="submit" value="Prisijungti" />
         </form>

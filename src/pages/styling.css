@@ -140,6 +140,9 @@ footer {
   background-color: var(--background-black);
   color: white;
 }
+.loginInput {
+  padding: 15px;
+}
 
 .bookContainer {
   width: 100%;
