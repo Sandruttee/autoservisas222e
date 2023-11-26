@@ -20,6 +20,7 @@ class Parent extends React.Component {
     return (
       <div>
         <AvailableTimeForm onAddTime={this.handleAddTime} />
+
         <BookingApp availableTimes={this.state.availableTimes} />
       </div>
     );

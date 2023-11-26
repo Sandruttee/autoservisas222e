@@ -5,6 +5,7 @@ class AvailableTimeForm extends React.Component {
     super(props);
     this.state = {
       newTime: "",
+      times: [],
     };
   }
 
@@ -13,27 +14,42 @@ class AvailableTimeForm extends React.Component {
   };
 
   addTime = () => {
-    if (this.props.onAddTime) {
-      this.props.onAddTime(this.state.newTime);
-      this.setState({ newTime: "" });
+    const { newTime } = this.state;
+    if (newTime !== "") {
+      this.setState((prevState) => ({
+        times: [...prevState.times, newTime],
+        newTime: "",
+      }));
     }
   };
 
   render() {
+    const { newTime, times } = this.state;
+
     return (
-      <div className="formContainer ">
+      <div className="formContainer">
         <h2>
           Įveskite savo laiką, kuriuo esate laisvas. Pavyzdys: 10:00-11:00
         </h2>
         <input
           type="text"
-          value={this.state.newTime}
+          value={newTime}
           onChange={this.handleInputChange}
           className="loginInput"
         />
+
         <button className="loginButton" onClick={this.addTime}>
           Add Time
         </button>
+
+        <div>
+          <h3>Times added:</h3>
+          <ul>
+            {times.map((time, index) => (
+              <li key={index}>{time}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     );
   }
