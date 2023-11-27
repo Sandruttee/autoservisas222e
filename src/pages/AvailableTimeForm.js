@@ -27,29 +27,40 @@ class AvailableTimeForm extends React.Component {
     const { newTime, times } = this.state;
 
     return (
-      <div className="formContainer">
-        <h2>
-          Įveskite savo laiką, kuriuo esate laisvas. Pavyzdys: 10:00-11:00
-        </h2>
-        <input
-          type="text"
-          value={newTime}
-          onChange={this.handleInputChange}
-          className="loginInput"
-        />
+      <div>
+        <div className="formContainer">
+          <h2>
+            Įveskite savo laiką, kuriuo esate laisvas. Pavyzdys: 10:00-11:00
+          </h2>
+          <input
+            type="text"
+            value={newTime}
+            onChange={this.handleInputChange}
+            className="loginInput"
+          />
 
-        <button className="loginButton" onClick={this.addTime}>
-          Add Time
-        </button>
+          <button className="loginButton" onClick={this.addTime}>
+            Pridėti laiką
+          </button>
 
-        <div>
-          <h3>Times added:</h3>
-          <ul>
-            {times.map((time, index) => (
-              <li key={index}>{time}</li>
-            ))}
-          </ul>
+          <div>
+            <h3>Jūs pridėjote šiuos laikus:</h3>
+            <ul>
+              {times.map((time, index) => (
+                <li className key={index}>
+                  {time}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+        <footer>
+          <h4>
+            AUTO<span class="red-text">SERVISAS 222E</span>
+          </h4>
+          <p class="p-footer">Mus rasite adresu: Staniūnų g. 67a, Panevėžys</p>
+          <p class="p-footer">Susisiekite su mumis: +37063222439</p>
+        </footer>
       </div>
     );
   }

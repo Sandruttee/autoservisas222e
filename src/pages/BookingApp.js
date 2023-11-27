@@ -22,25 +22,34 @@ class BookingApp extends React.Component {
 
   render() {
     return (
-      <div className="formContainer">
-        <h2>Pasirinkite Jums tinkamą laiką</h2>
-        <select className="loginInput" onChange={this.handleTimeSelection}>
-          <option value="">Pasirinkti laiką</option>
-          {this.props.availableTimes &&
-            this.props.availableTimes.map((time, index) => (
-              <option key={index} value={time}>
-                {time}
-              </option>
+      <div>
+        <div className="formContainer">
+          <h2>Pasirinkite Jums tinkamą laiką</h2>
+          <select className="loginInput" onChange={this.handleTimeSelection}>
+            <option value="">Pasirinkti laiką</option>
+            {this.props.availableTimes &&
+              this.props.availableTimes.map((time, index) => (
+                <option key={index} value={time}>
+                  {time}
+                </option>
+              ))}
+          </select>
+          <button className="loginButton" onClick={this.bookTime}>
+            Rezervuoti laiką
+          </button>
+          <ul>
+            {this.state.bookedTimes.map((time, index) => (
+              <li key={index}>{time}</li>
             ))}
-        </select>
-        <button className="loginButton" onClick={this.bookTime}>
-          Rezervuoti laiką
-        </button>
-        <ul>
-          {this.state.bookedTimes.map((time, index) => (
-            <li key={index}>{time}</li>
-          ))}
-        </ul>
+          </ul>
+        </div>
+        <footer>
+          <h4>
+            AUTO<span class="red-text">SERVISAS 222E</span>
+          </h4>
+          <p class="p-footer">Mus rasite adresu: Staniūnų g. 67a, Panevėžys</p>
+          <p class="p-footer">Susisiekite su mumis: +37063222439</p>
+        </footer>
       </div>
     );
   }
