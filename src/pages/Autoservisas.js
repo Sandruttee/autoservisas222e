@@ -11,16 +11,6 @@ const Autoservisas = () => {
       <p>
         <h1>Sveiki atvykę į AUTOSERVISAS 222e</h1>
         <h2>Mes rūpinamės Jūsų automobiliais nuo 2021-ųjų</h2>
-        <h3>Mūsų siūlomos paslaugos: </h3>
-        <ul>
-          <li>Važiuoklės remontas</li>
-          <li>Tepalų ir filtrų keitimas</li>
-          <li>Stabdžių sistemos remontas</li>
-          <li>Kompiuterinė diagnostika</li>
-          <li>Sankabos remontas</li>
-          <li>Kondicionierių pildymas ir remontas</li>
-          <li>Kitos paslaugos</li>
-        </ul>
       </p>
       <footer>
         <h4>

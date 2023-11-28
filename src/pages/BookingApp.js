@@ -24,7 +24,7 @@ class BookingApp extends React.Component {
     return (
       <div>
         <div className="formContainer">
-          <h2>Pasirinkite Jums tinkamą laiką</h2>
+          <h1>Pasirinkite Jums tinkamą laiką</h1>
           <select className="loginInput" onChange={this.handleTimeSelection}>
             <option value="">Pasirinkti laiką</option>
             {this.props.availableTimes &&
