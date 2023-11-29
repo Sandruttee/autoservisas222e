@@ -1,8 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import AvailableTimeForm from "./AvailableTimeForm";
 import BookingApp from "./BookingApp";
 
-class Parent extends React.Component {
+class Parent extends Component {
+  // ...
+}
   constructor(props) {
     super(props);
     this.state = {
@@ -19,7 +21,7 @@ class Parent extends React.Component {
   render() {
     return (
       <div>
-        <AvailableTimeForm onAddTime={this.handleAddTime} />
+    <AvailableTimeForm onAddTime={this.handleAddTime} />
 
         <BookingApp availableTimes={this.state.availableTimes} />
       </div>

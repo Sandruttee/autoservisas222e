@@ -32,10 +32,12 @@ const Contact = () => {
       </div>
       <footer>
         <h4>
-          AUTO<span class="red-text">SERVISAS 222E</span>
+          AUTO<span className="red-text">SERVISAS 222E</span>
         </h4>
-        <p class="p-footer">Mus rasite adresu: Staniūnų g. 67a, Panevėžys</p>
-        <p class="p-footer">Susisiekite su mumis: +37063222439</p>
+        <p className="p-footer">
+          Mus rasite adresu: Staniūnų g. 67a, Panevėžys
+        </p>
+        <p className="p-footer">Susisiekite su mumis: +37063222439</p>
       </footer>
     </div>
   );
