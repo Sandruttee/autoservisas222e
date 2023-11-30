@@ -47,9 +47,7 @@ class AvailableTimeForm extends React.Component {
             <h3>Jūs pridėjote šiuos laikus:</h3>
             <ul>
               {times.map((time, index) => (
-                <li className key={index}>
-                  {time}
-                </li>
+                <li key={index}>{time}</li>
               ))}
             </ul>
           </div>
