@@ -181,3 +181,21 @@ footer {
 .services {
   text-align: center;
 }
+
+.paslaugos-button {
+  padding: 20px;
+  background: rgba(23, 23, 23, 0.34);
+  border-radius: 4px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgba(23, 23, 23, 0.31);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.paslaugos-spacing {
+  max-width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}

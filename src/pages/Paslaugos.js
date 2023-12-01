@@ -5,15 +5,38 @@ export default function Paslaugos() {
     <div>
       <div className="services">
         <h1>Mūsų siūlomos paslaugos: </h1>
-        <ul>
-          <li>Važiuoklės remontas</li>
-          <li>Tepalų ir filtrų keitimas</li>
-          <li>Stabdžių sistemos remontas</li>
-          <li>Kompiuterinė diagnostika</li>
-          <li>Sankabos remontas</li>
-          <li>Kondicionierių pildymas ir remontas</li>
-          <li>Kitos paslaugos</li>
-        </ul>
+        <div className="row paslaugos-spacing">
+          <button className="paslaugos-button">
+            Automobilių paruošimas techninei apžiūrai
+          </button>
+          <div className="col-6">
+            <button className="paslaugos-button">Važiuoklės remontas</button>
+          </div>
+          <div className="col-6">
+            <button className="paslaugos-button">
+              Tepalų ir filtrų keitimas
+            </button>
+          </div>
+          <div className="col-6">
+            <button className="paslaugos-button">
+              Stabdžių sistemos remontas
+            </button>
+          </div>
+          <div className="col-6">
+            <button className="paslaugos-button">
+              Kompiuterinė diagnostika
+            </button>
+          </div>
+          <div className="col-6">
+            <button className="paslaugos-button">Sankabos remontas</button>
+          </div>
+          <div className="col-6">
+            <button className="paslaugos-button">
+              Kondicionierių pildymas ir remontas
+            </button>
+          </div>
+          <button className="paslaugos-button">Kitos paslaugos</button>
+        </div>
       </div>
       <footer>
         <h4>
