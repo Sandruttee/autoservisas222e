@@ -194,6 +194,10 @@ footer {
   margin-top: 20px;
 }
 
+.paslaugos-button:hover {
+  opacity: 0.8;
+}
+
 .paslaugos-spacing {
   max-width: 60%;
   text-align: center;

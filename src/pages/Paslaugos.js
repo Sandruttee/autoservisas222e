@@ -6,34 +6,52 @@ export default function Paslaugos() {
       <div className="services">
         <h1>Mūsų siūlomos paslaugos: </h1>
         <div className="row paslaugos-spacing">
-          <button className="paslaugos-button">
-            Automobilių paruošimas techninei apžiūrai
-          </button>
-          <div className="col-6">
-            <button className="paslaugos-button">Važiuoklės remontas</button>
-          </div>
-          <div className="col-6">
+          <a href="/BookingApp">
+            {" "}
             <button className="paslaugos-button">
-              Tepalų ir filtrų keitimas
-            </button>
+              Automobilių paruošimas techninei apžiūrai
+            </button>{" "}
+          </a>
+          <div className="col-6">
+            <a href="/BookingApp">
+              {" "}
+              <button className="paslaugos-button">
+                Važiuoklės remontas
+              </button>{" "}
+            </a>
           </div>
           <div className="col-6">
-            <button className="paslaugos-button">
-              Stabdžių sistemos remontas
-            </button>
+            <a href="/BookingApp">
+              <button className="paslaugos-button">
+                Tepalų ir filtrų keitimas
+              </button>
+            </a>
           </div>
           <div className="col-6">
-            <button className="paslaugos-button">
-              Kompiuterinė diagnostika
-            </button>
+            <a href="/BookingApp">
+              <button className="paslaugos-button">
+                Stabdžių sistemos remontas
+              </button>{" "}
+            </a>
           </div>
           <div className="col-6">
-            <button className="paslaugos-button">Sankabos remontas</button>
+            <a href="/BookingApp">
+              <button className="paslaugos-button">
+                Kompiuterinė diagnostika
+              </button>{" "}
+            </a>
           </div>
           <div className="col-6">
-            <button className="paslaugos-button">
-              Kondicionierių pildymas ir remontas
-            </button>
+            <a href="/BookingApp">
+              <button className="paslaugos-button">Sankabos remontas</button>{" "}
+            </a>
+          </div>
+          <div className="col-6">
+            <a href="/BookingApp">
+              <button className="paslaugos-button">
+                Kondicionierių pildymas ir remontas
+              </button>{" "}
+            </a>
           </div>
           <button className="paslaugos-button">Kitos paslaugos</button>
         </div>
