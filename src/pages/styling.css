@@ -1,13 +1,14 @@
 :root {
   --red-color: #fe0201;
   --background-black: #000000;
-  --text-color: #212529;
+  --text-color: #ffffff;
 }
 
 .page-container {
   font-family: "Dancing Script", cursive;
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
+  background-color: var(--background-black);
 }
 .container {
   background-color: var(--background-black);
@@ -184,7 +185,7 @@ footer {
 
 .paslaugos-button {
   padding: 20px;
-  background: rgba(23, 23, 23, 0.34);
+  background: rgba(255, 255, 255, 0.34);
   border-radius: 4px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(0px);
@@ -192,6 +193,7 @@ footer {
   border: 1px solid rgba(23, 23, 23, 0.31);
   margin-bottom: 20px;
   margin-top: 20px;
+  color: var(--text-color);
 }
 
 .paslaugos-button:hover {

@@ -12,6 +12,61 @@ const Autoservisas = () => {
         <h1>Sveiki atvykę į AUTOSERVISAS 222e</h1>
         <h2>Mes rūpinamės Jūsų automobiliais nuo 2021-ųjų</h2>
       </p>
+      <div className="services">
+        <h1>Mūsų siūlomos paslaugos: </h1>
+        <div className="row paslaugos-spacing">
+          <a href="/BookingApp">
+            {" "}
+            <button className="paslaugos-button">
+              Automobilių paruošimas techninei apžiūrai
+            </button>{" "}
+          </a>
+          <div className="col-6">
+            <a href="/BookingApp">
+              {" "}
+              <button className="paslaugos-button">
+                Važiuoklės remontas
+              </button>{" "}
+            </a>
+          </div>
+          <div className="col-6">
+            <a href="/BookingApp">
+              <button className="paslaugos-button">
+                Tepalų ir filtrų keitimas
+              </button>
+            </a>
+          </div>
+          <div className="col-6">
+            <a href="/BookingApp">
+              <button className="paslaugos-button">
+                Stabdžių sistemos remontas
+              </button>{" "}
+            </a>
+          </div>
+          <div className="col-6">
+            <a href="/BookingApp">
+              <button className="paslaugos-button">
+                Kompiuterinė diagnostika
+              </button>{" "}
+            </a>
+          </div>
+          <div className="col-6">
+            <a href="/BookingApp">
+              <button className="paslaugos-button">Sankabos remontas</button>{" "}
+            </a>
+          </div>
+          <div className="col-6">
+            <a href="/BookingApp">
+              <button className="paslaugos-button">
+                Kondicionierių pildymas ir remontas
+              </button>{" "}
+            </a>
+          </div>
+          <a href="/Contact">
+            <button className="paslaugos-button">Kitos paslaugos</button>
+          </a>
+        </div>
+      </div>
       <footer>
         <h4>
           AUTO<span className="red-text">SERVISAS 222E</span>

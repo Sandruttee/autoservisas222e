@@ -22,7 +22,7 @@ class BookingApp extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="page-container">
         <div className="formContainer">
           <h1>Pasirinkite Jums tinkamą laiką</h1>
           <select className="loginInput" onChange={this.handleTimeSelection}>
