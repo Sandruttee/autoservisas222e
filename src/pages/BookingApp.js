@@ -43,6 +43,19 @@ class BookingApp extends React.Component {
             ))}
           </ul>
         </div>
+        <form>
+          {" "}
+          <label for="name">Vardas ir Pavardė</label>
+          <input type="text"></input>
+          <br />
+          <label for="name">El. pašto adresas</label>
+          <input type="email"></input>
+          <br />
+          <label for="name">Telefono numeris</label>
+          <input type="text"></input>
+          <br />
+          <input type="submit" value="Rezervuoti laiką"></input>
+        </form>
         <footer>
           <h4>
             AUTO<span className="red-text">SERVISAS 222E</span>
