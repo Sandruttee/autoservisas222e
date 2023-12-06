@@ -24,47 +24,60 @@ class BookingApp extends React.Component {
     return (
       <div className="page-container">
         <div className="formContainer">
-          <h1>Pasirinkite Jums tinkamą laiką</h1>
-          <select className="loginInput" onChange={this.handleTimeSelection}>
-            <option value="">Pasirinkti laiką</option>
-            {this.props.availableTimes &&
-              this.props.availableTimes.map((time, index) => (
-                <option key={index} value={time}>
-                  {time}
-                </option>
+          <form>
+            <label className="bookingLabel">
+              Pasirinkite Jums tinkamą laiką
+            </label>{" "}
+            <br />
+            <select
+              className="bookingInput"
+              onChange={this.handleTimeSelection}
+            >
+              <option value="">Pasirinkti laiką</option>
+              {this.props.availableTimes &&
+                this.props.availableTimes.map((time, index) => (
+                  <option key={index} value={time}>
+                    {time}
+                  </option>
+                ))}
+            </select>
+            <ul>
+              {this.state.bookedTimes.map((time, index) => (
+                <li key={index}>{time}</li>
               ))}
-          </select>
-          <button className="loginButton" onClick={this.bookTime}>
-            Rezervuoti laiką
-          </button>
-          <ul>
-            {this.state.bookedTimes.map((time, index) => (
-              <li key={index}>{time}</li>
-            ))}
-          </ul>
+            </ul>{" "}
+            <label className="bookingLabel" for="name">
+              Vardas ir Pavardė
+            </label>{" "}
+            <br />
+            <input className="bookingInput" type="text"></input>
+            <br />
+            <label className="bookingLabel" for="name">
+              El. pašto adresas
+            </label>{" "}
+            <br />
+            <input className="bookingInput" type="email"></input>
+            <br />
+            <label className="bookingLabel" for="name">
+              Telefono numeris
+            </label>{" "}
+            <br />
+            <input className="bookingInput" type="text"></input>
+            <br />
+            <button className="loginButton" onClick={this.bookTime}>
+              Rezervuoti laiką
+            </button>
+          </form>
+          <footer>
+            <h4>
+              AUTO<span className="red-text">SERVISAS 222E</span>
+            </h4>
+            <p className="p-footer">
+              Mus rasite adresu: Staniūnų g. 67a, Panevėžys
+            </p>
+            <p className="p-footer">Susisiekite su mumis: +37063222439</p>
+          </footer>
         </div>
-        <form>
-          {" "}
-          <label for="name">Vardas ir Pavardė</label>
-          <input type="text"></input>
-          <br />
-          <label for="name">El. pašto adresas</label>
-          <input type="email"></input>
-          <br />
-          <label for="name">Telefono numeris</label>
-          <input type="text"></input>
-          <br />
-          <input type="submit" value="Rezervuoti laiką"></input>
-        </form>
-        <footer>
-          <h4>
-            AUTO<span className="red-text">SERVISAS 222E</span>
-          </h4>
-          <p className="p-footer">
-            Mus rasite adresu: Staniūnų g. 67a, Panevėžys
-          </p>
-          <p className="p-footer">Susisiekite su mumis: +37063222439</p>
-        </footer>
       </div>
     );
   }
