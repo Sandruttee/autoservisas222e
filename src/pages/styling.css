@@ -9,11 +9,8 @@
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
   background-color: var(--background-black);
-}
-.container {
-  background-color: var(--background-black);
-  max-width: 100%;
-  padding: 100px;
+  max-width: 70%;
+  margin: 0 auto;
 }
 
 form {
@@ -34,6 +31,10 @@ h2 {
 
 h3 {
   margin-top: 30px;
+}
+
+.heading-black {
+  color: black;
 }
 
 h4 {
@@ -158,6 +159,16 @@ p {
 
 /* Autoservisas page */
 
+.container {
+  background-color: var(--background-black);
+  max-width: 100%;
+  padding: 50px;
+}
+
+.greeting-container {
+  padding-bottom: 50px;
+}
+
 .autoservisas-logo {
   margin: 0 auto;
   display: block;
@@ -165,18 +176,32 @@ p {
 
 .services {
   text-align: center;
+  background-color: rgb(255, 255, 255);
 }
+
 .paslaugos-button {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.34);
-  border-radius: 4px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  border: 1px solid rgba(23, 23, 23, 0.31);
-  margin-bottom: 20px;
-  margin-top: 20px;
-  color: var(--text-color);
+  display: block;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 16px;
+  background-color: #000000;
+  text-decoration: none;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.btn-special {
+  width: 1165px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .paslaugos-button:hover {
@@ -184,9 +209,10 @@ p {
 }
 
 .paslaugos-spacing {
-  max-width: 60%;
   text-align: center;
   margin: 0 auto;
+  margin-top: 50px;
+  padding-bottom: 150px;
 }
 
 /* Booking page */

@@ -8,16 +8,19 @@ const Autoservisas = () => {
       <div class="container">
         <img src={logo} class="img-fluid autoservisas-logo" alt="logo" />
       </div>
-      <p>
-        <h1>Sveiki atvykę į AUTOSERVISAS 222e</h1>
-        <h2>Mes rūpinamės Jūsų automobiliais nuo 2021-ųjų</h2>
-      </p>
+      <div className="greeting-container">
+        <p>
+          <h1>Sveiki atvykę į AUTOSERVISAS 222e</h1>
+          <h2>Mes rūpinamės Jūsų automobiliais nuo 2021-ųjų</h2>
+        </p>
+      </div>
+
       <div className="services">
-        <h1>Mūsų siūlomos paslaugos: </h1>
+        <h1 className="heading-black">Mūsų siūlomos paslaugos: </h1>
         <div className="row paslaugos-spacing">
           <a href="/BookingApp">
             {" "}
-            <button className="paslaugos-button">
+            <button className="paslaugos-button btn-special">
               Automobilių paruošimas techninei apžiūrai
             </button>{" "}
           </a>
@@ -63,7 +66,9 @@ const Autoservisas = () => {
             </a>
           </div>
           <a href="/Contact">
-            <button className="paslaugos-button">Kitos paslaugos</button>
+            <button className="paslaugos-button btn-special">
+              Kitos paslaugos
+            </button>
           </a>
         </div>
       </div>
