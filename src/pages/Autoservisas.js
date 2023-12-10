@@ -24,7 +24,7 @@ const Autoservisas = () => {
               Automobilių paruošimas techninei apžiūrai
             </button>{" "}
           </a>
-          <div className="col-6">
+          <div className="col-mb-6">
             <a href="/BookingApp">
               {" "}
               <button className="paslaugos-button">
@@ -32,33 +32,33 @@ const Autoservisas = () => {
               </button>{" "}
             </a>
           </div>
-          <div className="col-6">
+          <div className="col-mb-6">
             <a href="/BookingApp">
               <button className="paslaugos-button">
                 Tepalų ir filtrų keitimas
               </button>
             </a>
           </div>
-          <div className="col-6">
+          <div className="col-mb-6">
             <a href="/BookingApp">
               <button className="paslaugos-button">
                 Stabdžių sistemos remontas
               </button>{" "}
             </a>
           </div>
-          <div className="col-6">
+          <div className="col-mb-6">
             <a href="/BookingApp">
               <button className="paslaugos-button">
                 Kompiuterinė diagnostika
               </button>{" "}
             </a>
           </div>
-          <div className="col-6">
+          <div className="col-mb-6">
             <a href="/BookingApp">
               <button className="paslaugos-button">Sankabos remontas</button>{" "}
             </a>
           </div>
-          <div className="col-6">
+          <div className="col-mb-6">
             <a href="/BookingApp">
               <button className="paslaugos-button">
                 Kondicionierių pildymas ir remontas
