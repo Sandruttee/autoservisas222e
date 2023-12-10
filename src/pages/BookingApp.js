@@ -24,6 +24,7 @@ class BookingApp extends React.Component {
     return (
       <div className="page-container">
         <div className="formContainer">
+          <h1>Rezervuokite laiką savo vizitui</h1>
           <form>
             <label className="bookingLabel">
               Pasirinkite Jums tinkamą laiką

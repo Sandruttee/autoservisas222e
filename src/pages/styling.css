@@ -104,7 +104,7 @@ p {
   margin-bottom: 50px;
 }
 .login__title {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 /* Available Time Form page */
@@ -155,7 +155,6 @@ p {
 
 .formContainer {
   text-align: center;
-
   padding-top: 50px;
 }
 
@@ -246,7 +245,7 @@ footer {
   color: var(--red-color);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
   h1 {
     font-size: 20px;
   }
@@ -267,5 +266,8 @@ footer {
 
   .btn-special {
     max-width: 80%;
+  }
+  .login__title {
+    margin-bottom: 40px;
   }
 }
