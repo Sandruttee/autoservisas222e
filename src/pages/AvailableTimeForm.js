@@ -29,9 +29,9 @@ class AvailableTimeForm extends React.Component {
     return (
       <div>
         <div className="formContainer">
-          <h2>
+          <h1 className="special-margin">
             Įveskite savo laiką, kuriuo esate laisvas. Pavyzdys: 10:00-11:00
-          </h2>
+          </h1>
           <input
             type="text"
             value={newTime}
@@ -44,7 +44,7 @@ class AvailableTimeForm extends React.Component {
           </button>
 
           <div>
-            <h3>Jūs pridėjote šiuos laikus:</h3>
+            <h3 className="special-margin">Jūs pridėjote šiuos laikus:</h3>
             <ul>
               {times.map((time, index) => (
                 <li key={index}>{time}</li>
