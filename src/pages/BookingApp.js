@@ -69,16 +69,16 @@ class BookingApp extends React.Component {
               Rezervuoti laiką
             </button>
           </form>
-          <footer>
-            <h4>
-              AUTO<span className="red-text">SERVISAS 222E</span>
-            </h4>
-            <p className="p-footer">
-              Mus rasite adresu: Staniūnų g. 67a, Panevėžys
-            </p>
-            <p className="p-footer">Susisiekite su mumis: +37063222439</p>
-          </footer>
         </div>
+        <footer>
+          <h4>
+            AUTO<span className="red-text">SERVISAS 222E</span>
+          </h4>
+          <p className="p-footer">
+            Mus rasite adresu: Staniūnų g. 67a, Panevėžys
+          </p>
+          <p className="p-footer">Susisiekite su mumis: +37063222439</p>
+        </footer>
       </div>
     );
   }

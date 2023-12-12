@@ -44,11 +44,13 @@ class AvailableTimeForm extends React.Component {
           </button>
 
           <div>
-            <h3 className="special-margin">Jūs pridėjote šiuos laikus:</h3>
+            <h3 className="special-margin">Jūs pridėjote šiuos laikus:</h3>{" "}
             <ul>
               {times.map((time, index) => (
-                <li key={index}>{time}</li>
-              ))}
+                <button className="addedTimeButton">
+                  <li key={index}>{time}</li>{" "}
+                </button>
+              ))}{" "}
             </ul>
           </div>
         </div>
