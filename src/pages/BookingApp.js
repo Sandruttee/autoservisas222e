@@ -65,6 +65,12 @@ class BookingApp extends React.Component {
             <br />
             <input className="bookingInput" type="text"></input>
             <br />
+            <label className="bookingLabel" for="name">
+              Parašykite komentarą (pvz.: automobilio modelį, pagaminimo metus)
+            </label>{" "}
+            <br />
+            <input className="bookingInputSpecial" type="text"></input>
+            <br />
             <button className="loginButton" onClick={this.bookTime}>
               Rezervuoti laiką
             </button>

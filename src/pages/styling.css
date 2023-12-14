@@ -236,6 +236,10 @@ a {
   padding: 16px;
   width: 500px;
 }
+.bookingInputSpecial {
+  padding: 40px;
+  width: 500px;
+}
 
 .bookingLabel {
   padding: 16px;
