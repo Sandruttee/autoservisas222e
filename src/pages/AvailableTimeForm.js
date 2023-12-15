@@ -23,6 +23,16 @@ class AvailableTimeForm extends React.Component {
     }
   };
 
+  removeTime = (index) => {
+    this.setState((prevState) => {
+      const newTimes = [...prevState.times];
+      newTimes.splice(index, 1);
+      return {
+        times: newTimes,
+      };
+    });
+  };
+
   render() {
     const { newTime, times } = this.state;
 
@@ -44,14 +54,22 @@ class AvailableTimeForm extends React.Component {
           </button>
 
           <div>
-            <h3 className="special-margin">Jūs pridėjote šiuos laikus:</h3>{" "}
+            <h3 className="special-margin">Jūs pridėjote šiuos laikus:</h3>
             <ul>
               {times.map((time, index) => (
-                <button className="addedTimeButton">
-                  <li key={index}>{time}</li>{" "}
+                <button
+                  className="addedTimeButton"
+                  onClick={() => this.removeTime(index)}
+                  key={index}
+                >
+                  <li>{time}</li>
                 </button>
-              ))}{" "}
+              ))}
             </ul>
+            <h3 className="special-margin">
+              Norėdami pašalinti klaidingai pridėtą laiką tiesiog paspauskite
+              ant jo.
+            </h3>
           </div>
         </div>
         <footer>
