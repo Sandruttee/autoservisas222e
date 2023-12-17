@@ -36,11 +36,14 @@ class BookingApp extends React.Component {
             >
               <option value="">Pasirinkti laiką</option>
               {this.props.availableTimes &&
-                this.props.availableTimes.map((time, index) => (
-                  <option key={index} value={time}>
-                    {time}
-                  </option>
-                ))}
+                this.props.availableTimes.map((time, index) => {
+                  console.log(time);
+                  return (
+                    <option key={index} value={time}>
+                      {time}
+                    </option>
+                  );
+                })}
             </select>
             <ul>
               {this.state.bookedTimes.map((time, index) => (

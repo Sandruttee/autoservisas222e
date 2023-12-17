@@ -1,27 +1,23 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addTime } from "./actions";
 
-class AvailableTimeForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      newTime: "",
-      times: [],
-    };
-  }
+const AvailableTimeForm = () => {
+  const dispatch = useDispatch();
+  const times = useSelector((state) => state.times);
+  const [newTime, setNewTime] = React.useState("");
 
-  handleInputChange = (e) => {
-    this.setState({ newTime: e.target.value });
+  const handleInputChange = (e) => {
+    setNewTime(e.target.value);
   };
 
-  addTime = () => {
-    const { newTime } = this.state;
+  const addTimeHandler = () => {
     if (newTime !== "") {
-      this.setState((prevState) => ({
-        times: [...prevState.times, newTime],
-        newTime: "",
-      }));
+      dispatch(addTime(newTime));
+      setNewTime("");
     }
   };
+
 
   removeTime = (index) => {
     this.setState((prevState) => {
@@ -49,7 +45,7 @@ class AvailableTimeForm extends React.Component {
             className="loginInput"
           />
 
-          <button className="loginButton" onClick={this.addTime}>
+          <button className="loginButton" onClick={addTimeHandler}>
             Pridėti laiką
           </button>
 

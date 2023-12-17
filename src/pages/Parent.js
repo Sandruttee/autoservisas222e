@@ -1,27 +1,21 @@
 import React from "react";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
 import AvailableTimeForm from "./AvailableTimeForm";
 import BookingApp from "./BookingApp";
+import rootReducer from "./reducers";
+
+const store = createStore(rootReducer);
 
 class Parent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      availableTimes: [],
-    };
-  }
-
-  handleAddTime = (newTime) => {
-    this.setState((prevState) => ({
-      availableTimes: [...prevState.availableTimes, newTime],
-    }));
-  };
-
   render() {
     return (
-      <div>
-        <AvailableTimeForm onAddTime={this.handleAddTime} />
-        <BookingApp availableTimes={this.state.availableTimes} />
-      </div>
+      <Provider store={store}>
+        <div>
+          <AvailableTimeForm />
+          <BookingApp />
+        </div>
+      </Provider>
     );
   }
 }
