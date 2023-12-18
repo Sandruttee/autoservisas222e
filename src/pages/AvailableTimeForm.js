@@ -1,11 +1,12 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTime, setTimes } from "./actions"; // Import the setTimes action
+import { addTime, setTimes } from "./actions";
 
 const AvailableTimeForm = () => {
   const dispatch = useDispatch();
   const times = useSelector((state) => state.times);
   const [newTime, setNewTime] = React.useState("");
+  const [deletedIndices, setDeletedIndices] = React.useState([]);
 
   const handleInputChange = (e) => {
     setNewTime(e.target.value);
@@ -19,9 +20,9 @@ const AvailableTimeForm = () => {
   };
 
   const removeTime = (index) => {
-    const newTimes = [...times];
-    newTimes.splice(index, 1);
-    dispatch(setTimes(newTimes));
+    const updatedTimes = times.filter((time, idx) => idx !== index);
+    dispatch(setTimes(updatedTimes));
+    setDeletedIndices([...deletedIndices, index]);
   };
 
   return (
@@ -33,7 +34,7 @@ const AvailableTimeForm = () => {
         <input
           type="text"
           value={newTime}
-          onChange={this.handleInputChange}
+          onChange={handleInputChange}
           className="loginInput"
         />
 
@@ -44,15 +45,17 @@ const AvailableTimeForm = () => {
         <div>
           <h3 className="special-margin">Jūs pridėjote šiuos laikus:</h3>
           <ul>
-            {times.map((time, index) => (
-              <button
-                className="addedTimeButton"
-                onClick={() => this.removeTime(index)}
-                key={index}
-              >
-                <li>{time}</li>
-              </button>
-            ))}
+            {times.map((time, index) =>
+              !deletedIndices.includes(index) ? (
+                <button
+                  className="addedTimeButton"
+                  onClick={() => removeTime(index)}
+                  key={index}
+                >
+                  <li>{time}</li>
+                </button>
+              ) : null
+            )}
           </ul>
           <h3 className="special-margin">
             Norėdami pašalinti klaidingai pridėtą laiką tiesiog paspauskite ant
@@ -60,15 +63,6 @@ const AvailableTimeForm = () => {
           </h3>
         </div>
       </div>
-      <footer>
-        <h4>
-          AUTO<span className="red-text">SERVISAS 222E</span>
-        </h4>
-        <p className="p-footer">
-          Mus rasite adresu: Staniūnų g. 67a, Panevėžys
-        </p>
-        <p className="p-footer">Susisiekite su mumis: +37063222439</p>
-      </footer>
     </div>
   );
 };
