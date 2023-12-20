@@ -272,7 +272,7 @@ footer {
   color: var(--red-color);
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1000px) {
   h1 {
     font-size: 20px;
   }
@@ -296,5 +296,15 @@ footer {
   }
   .login__title {
     margin-bottom: 40px;
+  }
+  .bookingInput,
+  .bookingInputSpecial,
+  .loginButton,
+  .loginInput {
+    max-width: 80%;
+  }
+
+  .page-container {
+    max-width: 100%;
   }
 }
