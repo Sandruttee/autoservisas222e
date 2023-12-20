@@ -69,7 +69,8 @@ class BookingApp extends React.Component {
             <input className="bookingInput" type="text"></input>
             <br />
             <label className="bookingLabel" for="name">
-              Parašykite komentarą (pvz.: automobilio modelį, pagaminimo metus)
+              Parašykite komentarą <br /> (pavyzdžiui: automobilio modelį,
+              pagaminimo metus)
             </label>{" "}
             <br />
             <input className="bookingInputSpecial" type="text"></input>

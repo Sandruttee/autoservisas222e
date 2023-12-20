@@ -29,7 +29,8 @@ const AvailableTimeForm = () => {
     <div>
       <div className="formContainer">
         <h1 className="special-margin">
-          Įveskite savo laiką, kuriuo esate laisvas. Pavyzdys: 10:00-11:00
+          Įveskite savo laiką, kuriuo esate laisvas. <br />{" "}
+          <div className="smaller-font">Pavyzdys: 10:00-11:00</div>
         </h1>
         <input
           type="text"
@@ -43,7 +44,13 @@ const AvailableTimeForm = () => {
         </button>
 
         <div>
-          <h3 className="special-margin">Jūs pridėjote šiuos laikus:</h3>
+          <h3 className="special-margin">
+            Jūs pridėjote šiuos laikus: <br />{" "}
+            <div className="small-font">
+              (norėdami pašalinti klaidingai pridėtą laiką tiesiog paspauskite
+              ant jo){" "}
+            </div>
+          </h3>
           <ul>
             {times.map((time, index) =>
               !deletedIndices.includes(index) ? (
@@ -57,10 +64,6 @@ const AvailableTimeForm = () => {
               ) : null
             )}
           </ul>
-          <h3 className="special-margin">
-            Norėdami pašalinti klaidingai pridėtą laiką tiesiog paspauskite ant
-            jo.
-          </h3>
         </div>
       </div>
     </div>
