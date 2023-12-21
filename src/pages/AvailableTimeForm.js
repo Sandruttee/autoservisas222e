@@ -1,71 +1,105 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTime, setTimes } from "./actions";
 
 const AvailableTimeForm = () => {
   const dispatch = useDispatch();
   const times = useSelector((state) => state.times);
-  const [newTime, setNewTime] = React.useState("");
-  const [deletedIndices, setDeletedIndices] = React.useState([]);
+  const [selectedTime, setSelectedTime] = useState("");
 
-  const handleInputChange = (e) => {
-    setNewTime(e.target.value);
+  const handleTimeSelect = (time) => {
+    setSelectedTime(time);
   };
 
   const addTimeHandler = () => {
-    if (newTime !== "") {
-      dispatch(addTime(newTime));
-      setNewTime("");
+    if (selectedTime !== "") {
+      dispatch(addTime(selectedTime));
+      setSelectedTime("");
     }
   };
 
   const removeTime = (index) => {
-    const updatedTimes = times.filter((time, idx) => idx !== index);
+    const updatedTimes = times.filter((_, idx) => idx !== index);
     dispatch(setTimes(updatedTimes));
-    setDeletedIndices([...deletedIndices, index]);
   };
 
   return (
     <div>
       <div className="formContainer">
         <h1 className="special-margin">
-          Įveskite savo laiką, kuriuo esate laisvas. <br />{" "}
-          <div className="smaller-font">Pavyzdys: 10:00-11:00</div>
+          Pasirinkite laiką, kuriuo esate laisvas.
         </h1>
-        <input
-          type="text"
-          value={newTime}
-          onChange={handleInputChange}
-          className="loginInput"
-        />
+        <Clock onTimeSelect={handleTimeSelect} />
 
         <button className="loginButton" onClick={addTimeHandler}>
           Pridėti laiką
         </button>
 
         <div>
-          <h3 className="special-margin">
-            Jūs pridėjote šiuos laikus: <br />{" "}
-            <div className="small-font">
-              (norėdami pašalinti klaidingai pridėtą laiką tiesiog paspauskite
-              ant jo){" "}
-            </div>
-          </h3>
+          <h3 className="special-margin">Jūs pridėjote šiuos laikus:</h3>
           <ul>
-            {times.map((time, index) =>
-              !deletedIndices.includes(index) ? (
-                <button
-                  className="addedTimeButton"
-                  onClick={() => removeTime(index)}
-                  key={index}
-                >
-                  <li>{time}</li>
-                </button>
-              ) : null
-            )}
+            {times.map((time, index) => (
+              <button
+                className="addedTimeButton"
+                onClick={() => removeTime(index)}
+                key={index}
+              >
+                <li>{time}</li>
+              </button>
+            ))}
           </ul>
         </div>
       </div>
+    </div>
+  );
+};
+
+const Clock = ({ onTimeSelect }) => {
+  const [selectedHour, setSelectedHour] = useState("");
+  const [selectedMinute, setSelectedMinute] = useState("");
+
+  const handleTimeSelect = () => {
+    if (selectedHour !== "" && selectedMinute !== "") {
+      const time = selectedHour + ":" + selectedMinute;
+      onTimeSelect(time);
+      setSelectedHour("");
+      setSelectedMinute("");
+    }
+  };
+
+  return (
+    <div className="clock">
+      <label htmlFor="hour">Valanda: </label>
+      <select
+        id="hour"
+        value={selectedHour}
+        onChange={(e) => setSelectedHour(e.target.value)}
+      >
+        <option value="">Pasirinkite valandą</option>
+        {Array.from({ length: 24 }, (_, i) => (
+          <option value={i < 10 ? `0${i}` : i} key={i}>
+            {i < 10 ? `0${i}` : i}
+          </option>
+        ))}
+      </select>
+
+      <label htmlFor="minute">Minutė: </label>
+      <select
+        id="minute"
+        value={selectedMinute}
+        onChange={(e) => setSelectedMinute(e.target.value)}
+      >
+        <option value="">Pasirinkite minutę</option>
+        {Array.from({ length: 60 }, (_, i) => (
+          <option value={i < 10 ? `0${i}` : i} key={i}>
+            {i < 10 ? `0${i}` : i}
+          </option>
+        ))}
+      </select>
+
+      <button className="clockButton" onClick={handleTimeSelect}>
+        Pasirinkti
+      </button>
     </div>
   );
 };

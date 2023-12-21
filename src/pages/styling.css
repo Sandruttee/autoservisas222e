@@ -307,4 +307,7 @@ footer {
   .page-container {
     max-width: 100%;
   }
+  .addedTimeButton {
+    max-width: 80%;
+  }
 }
