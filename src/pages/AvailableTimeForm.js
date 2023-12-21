@@ -11,7 +11,7 @@ const AvailableTimeForm = () => {
     setSelectedTime(time);
   };
 
-  const addTimeHandler = () => {
+  const handleAddTime = () => {
     if (selectedTime !== "") {
       dispatch(addTime(selectedTime));
       setSelectedTime("");
@@ -29,11 +29,7 @@ const AvailableTimeForm = () => {
         <h1 className="special-margin">
           Pasirinkite laiką, kuriuo esate laisvas.
         </h1>
-        <Clock onTimeSelect={handleTimeSelect} />
-
-        <button className="loginButton" onClick={addTimeHandler}>
-          Pridėti laiką
-        </button>
+        <Clock onTimeSelect={handleTimeSelect} onAddTime={handleAddTime} />
 
         <div>
           <h3 className="special-margin">Jūs pridėjote šiuos laikus:</h3>
@@ -54,7 +50,7 @@ const AvailableTimeForm = () => {
   );
 };
 
-const Clock = ({ onTimeSelect }) => {
+const Clock = ({ onTimeSelect, onAddTime }) => {
   const [selectedHour, setSelectedHour] = useState("");
   const [selectedMinute, setSelectedMinute] = useState("");
 
@@ -65,6 +61,11 @@ const Clock = ({ onTimeSelect }) => {
       setSelectedHour("");
       setSelectedMinute("");
     }
+  };
+
+  const handleButtonClick = () => {
+    handleTimeSelect();
+    onAddTime();
   };
 
   return (
@@ -97,8 +98,8 @@ const Clock = ({ onTimeSelect }) => {
         ))}
       </select>
 
-      <button className="clockButton" onClick={handleTimeSelect}>
-        Pasirinkti
+      <button className="clockButton" onClick={handleButtonClick}>
+        Pasirinkti ir pridėti laiką
       </button>
     </div>
   );
