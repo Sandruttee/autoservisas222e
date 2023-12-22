@@ -6,6 +6,7 @@ const AvailableTimeForm = () => {
   const dispatch = useDispatch();
   const times = useSelector((state) => state.times);
   const [selectedTime, setSelectedTime] = useState("");
+  const [deletedIndices, setDeletedIndices] = React.useState([]);
 
   const handleTimeSelect = (time) => {
     setSelectedTime(time);
@@ -19,8 +20,9 @@ const AvailableTimeForm = () => {
   };
 
   const removeTime = (index) => {
-    const updatedTimes = times.filter((_, idx) => idx !== index);
+    const updatedTimes = times.filter((time, idx) => idx !== index);
     dispatch(setTimes(updatedTimes));
+    setDeletedIndices([...deletedIndices, index]);
   };
 
   return (
@@ -33,16 +35,22 @@ const AvailableTimeForm = () => {
 
         <div>
           <h3 className="special-margin">Jūs pridėjote šiuos laikus:</h3>
+          <div className="small-font">
+            (norėdami pašalinti klaidingai pridėtą laiką tiesiog paspauskite ant
+            jo)
+          </div>
           <ul>
-            {times.map((time, index) => (
-              <button
-                className="addedTimeButton"
-                onClick={() => removeTime(index)}
-                key={index}
-              >
-                <li>{time}</li>
-              </button>
-            ))}
+            {times.map((time, index) =>
+              !deletedIndices.includes(index) ? (
+                <button
+                  className="addedTimeButton"
+                  onClick={() => removeTime(index)}
+                  key={index}
+                >
+                  <li>{time}</li>
+                </button>
+              ) : null
+            )}
           </ul>
         </div>
       </div>
