@@ -78,9 +78,13 @@ const Clock = ({ onTimeSelect, onAddTime }) => {
 
   return (
     <div className="clock">
-      <label htmlFor="hour">Valanda: </label>
+      <label htmlFor="hour" className="label-text">
+        Valanda:{" "}
+      </label>
+      <br />
       <select
         id="hour"
+        className="timeInput"
         value={selectedHour}
         onChange={(e) => setSelectedHour(e.target.value)}
       >
@@ -91,10 +95,15 @@ const Clock = ({ onTimeSelect, onAddTime }) => {
           </option>
         ))}
       </select>
+      <br />
 
-      <label htmlFor="minute">Minutė: </label>
+      <label htmlFor="minute" className="label-text">
+        Minutė:{" "}
+      </label>
+      <br />
       <select
         id="minute"
+        className="timeInput"
         value={selectedMinute}
         onChange={(e) => setSelectedMinute(e.target.value)}
       >
@@ -105,9 +114,12 @@ const Clock = ({ onTimeSelect, onAddTime }) => {
           </option>
         ))}
       </select>
-
-      <button className="clockButton" onClick={handleButtonClick}>
-        Pasirinkti ir pridėti laiką
+      <br />
+      <button
+        className="clockButton pasirinktiButton"
+        onClick={handleButtonClick}
+      >
+        Pasirinkti laiką
       </button>
     </div>
   );

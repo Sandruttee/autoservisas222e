@@ -133,6 +133,24 @@ p {
   background-color: var(--background-black);
   color: white;
 }
+.label-text {
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.timeInput {
+  padding: 16px;
+  width: 500px;
+  text-align: center;
+}
+
+.pasirinktiButton {
+  margin-top: 30px;
+  width: 500px;
+  padding: 16px;
+  background-color: var(--background-black);
+  color: white;
+}
 .loginInput {
   padding: 16px;
   width: 500px;
