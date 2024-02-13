@@ -28,16 +28,16 @@ const AvailableTimeForm = () => {
   return (
     <div>
       <div className="formContainer">
-        <h1 className="special-margin">
-          Pasirinkite laiką, kuriuo esate laisvas.
-        </h1>
+        <h1 className="special-margin">Choose available time</h1>
+        {/*this can look also differently, i do want it to have kind of a
+        calendar on which the admin is able to add times. Let's say sunday:
+  10:30-11:30, monday 09:30-10:00 and etc.*/}
         <Clock onTimeSelect={handleTimeSelect} onAddTime={handleAddTime} />
-
         <div>
-          <h3 className="special-margin">Jūs pridėjote šiuos laikus:</h3>
+          {/*Here i want admin to be able to view and to remove the times that he has added incorectly*/}
+          <h3 className="special-margin">You've added these times:</h3>
           <div className="small-font">
-            (norėdami pašalinti klaidingai pridėtą laiką tiesiog paspauskite ant
-            jo)
+            (to remove wrong time just click on it)
           </div>
           <ul>
             {times.map((time, index) =>
@@ -79,7 +79,7 @@ const Clock = ({ onTimeSelect, onAddTime }) => {
   return (
     <div className="clock">
       <label htmlFor="hour" className="label-text">
-        Valanda:{" "}
+        Hour:{" "}
       </label>
       <br />
       <select
@@ -88,7 +88,7 @@ const Clock = ({ onTimeSelect, onAddTime }) => {
         value={selectedHour}
         onChange={(e) => setSelectedHour(e.target.value)}
       >
-        <option value="">Pasirinkite valandą</option>
+        <option value="">Choose hour</option>
         {Array.from({ length: 24 }, (_, i) => (
           <option value={i < 10 ? `0${i}` : i} key={i}>
             {i < 10 ? `0${i}` : i}
@@ -98,7 +98,7 @@ const Clock = ({ onTimeSelect, onAddTime }) => {
       <br />
 
       <label htmlFor="minute" className="label-text">
-        Minutė:{" "}
+        Minute:{" "}
       </label>
       <br />
       <select
@@ -107,7 +107,7 @@ const Clock = ({ onTimeSelect, onAddTime }) => {
         value={selectedMinute}
         onChange={(e) => setSelectedMinute(e.target.value)}
       >
-        <option value="">Pasirinkite minutę</option>
+        <option value="">Choose minutes</option>
         {Array.from({ length: 60 }, (_, i) => (
           <option value={i < 10 ? `0${i}` : i} key={i}>
             {i < 10 ? `0${i}` : i}
@@ -119,7 +119,7 @@ const Clock = ({ onTimeSelect, onAddTime }) => {
         className="clockButton pasirinktiButton"
         onClick={handleButtonClick}
       >
-        Pasirinkti laiką
+        Add time
       </button>
     </div>
   );

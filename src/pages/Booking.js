@@ -27,8 +27,8 @@ export default function Booking() {
     <div className="page-container">
       <main className="login">
         <form className="login__form" onSubmit={handleSubmit}>
-          <h1 className="login__title">Prisijunkite prie savo paskyros</h1>
-          <label htmlFor="username">Vartotojo vardas</label>
+          <h1 className="login__title">Log in</h1>
+          <label htmlFor="username">Put: Egidijus</label>
           <input
             id="username"
             name="username"
@@ -36,7 +36,7 @@ export default function Booking() {
             onChange={updateUsername}
             className="username loginInput"
           />
-          <label htmlFor="password">Slaptažodis</label>
+          <label htmlFor="password">Put: y</label>
           <input
             id="password"
             type="password"

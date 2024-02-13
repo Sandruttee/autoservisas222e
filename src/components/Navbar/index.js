@@ -11,14 +11,14 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink to="/BookingApp" activeStyle>
-            Rezervuok laiką
+            Reserve the time (user side)
           </NavLink>
 
           <NavLink to="/Contact" activeStyle>
             Kontaktai
           </NavLink>
           <NavLink to="/Booking" activeStyle>
-            Prisijungimas
+            Log in (for admin)
           </NavLink>
         </NavMenu>
       </Nav>

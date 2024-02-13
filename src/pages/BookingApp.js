@@ -24,17 +24,15 @@ class BookingApp extends React.Component {
     return (
       <div className="page-container">
         <div className="formContainer">
-          <h1>Rezervuokite laiką savo vizitui</h1>
+          <h1>Reserve time for your visit</h1>
           <form>
-            <label className="bookingLabel">
-              Pasirinkite Jums tinkamą laiką
-            </label>{" "}
-            <br />
+            <label className="bookingLabel">Choose time</label> <br />
             <select
               className="bookingInput"
               onChange={this.handleTimeSelection}
             >
-              <option value="">Pasirinkti laiką</option>
+              <option value="">Choose time</option>{" "}
+              {/*Here i want user to be able to choose time for his/her appointment that was preeviously added buy the admin */}
               {this.props.availableTimes &&
                 this.props.availableTimes.map((time, index) => {
                   console.log(time);
@@ -51,32 +49,32 @@ class BookingApp extends React.Component {
               ))}
             </ul>{" "}
             <label className="bookingLabel" for="name">
-              Vardas ir Pavardė
+              Name and Surename
             </label>{" "}
             <br />
             <input className="bookingInput" type="text"></input>
             <br />
             <label className="bookingLabel" for="name">
-              El. pašto adresas
+              E-mail adress
             </label>{" "}
             <br />
             <input className="bookingInput" type="email"></input>
             <br />
             <label className="bookingLabel" for="name">
-              Telefono numeris
+              Phone number
             </label>{" "}
             <br />
             <input className="bookingInput" type="text"></input>
             <br />
             <label className="bookingLabel" for="name">
-              Parašykite komentarą <br /> (pavyzdžiui: automobilio modelį,
-              pagaminimo metus)
+              Write a comment <br /> (example: car, problem)
             </label>{" "}
             <br />
             <input className="bookingInputSpecial" type="text"></input>
             <br />
             <button className="loginButton" onClick={this.bookTime}>
-              Rezervuoti laiką
+              Reserve time{" "}
+              {/*Here the user should be able to click and reserve the time for the appointment, before puttiong all the information about them. The admin should be notified by email/sms about the reservation*/}
             </button>
           </form>
         </div>
